@@ -1,0 +1,39 @@
+=== [0] MANIFEST & TOOLCHAIN RECEIPT ===
+timestamp: 2026-11-20 19:05:49 UTC
+lean_version: Lean (version 4.33.1, x86_64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+lean_bin_sha256: e8baaa71855a616dc351028f3ad2200051b0671f423a1696a100e809302d5550  /root/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean
+modules_hashed: 175,187 in 27.87s
+olean_manifest_root_sha256: 248bb64b6f59ebcdb1298b3e9f47598f06e14a2da83cb4058f9fa99e79882bca
+
+=== [1] STOCK LEAN 4.33.1 STATEMENT PIN & #print axioms ===
+timestamp: 2026-11-20 19:07:05 UTC
+rc=0 elapsed=76.05s
+main_olean_sha256: ce9a2006adda570c7404866ff3ceb4a7341c6c5d8ae7b56b6d8600b4c312d1ab  /root/rh-lean/lean/.lake/build/lib/lean/Main.olean
+--- stdout ---
+riemannHypothesis : RiemannHypothesis
+'riemannHypothesis' depends on axioms: [propext, Classical.choice, Quot.sound]
+'riemannZeta_eq_zero_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LFunction_ne_zero_of_half_lt_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LFunction_eq_zero_re' depends on axioms: [propext, Classical.choice, Quot.sound]
+'LFunction_eq_zero_re_of_isPrimitive' depends on axioms: [propext, Classical.choice, Quot.sound]
+
+--- stderr ---
+
+
+=== INDEPENDENT RUST KERNEL (all_five: riemannHypothesis, riemannZeta_eq_zero_re, LFunction_ne_zero_of_half_lt_re, LFunction_eq_zero_re, LFunction_eq_zero_re_of_isPrimitive) ===
+exp_rc=0 nanoda_rc=0 elapsed=9295.23s (export_eof=7925.72s)
+export_bytes=61,571,290,481 (57.34 GiB) export_lines=1,080,769,494
+export_sha256=4301ce4828d397c728e87f3e6a1251aa42abe5e12809bb9e0b73cc3d33072e7e
+--- nanoda stdout ---
+axiom propext {a b : Prop} : Iff a b → Eq a b
+
+axiom Quot.sound.{u} {α : Sort u} {r : α → α → Prop} {a b : α} : r a b → Eq (Quot.mk r a) (Quot.mk r b)
+
+axiom Classical.choice.{u} {α : Sort u} : Nonempty α → α
+
+Checked 1484729 declarations with no errors
+
+--- nanoda stderr ---
+
+--- export stderr ---
+
